@@ -1,5 +1,5 @@
 # redux-compare-state
-Tracks redux store changes
+**Tracks redux store changes**
 
 _You need 5 steps to start tracking your changes:_
 ```
@@ -20,7 +20,7 @@ AND
 yarn win-state <the_link_to_your_new_redux_store>
 ```
 
-- You can rewrite STATE_VARIABLE env variable in package.json for state/snapshot tests if your endpoint have whole state in another varaible than default (__initialState__)
+- You can rewrite STATE_VARIABLE env variable in package.json for state/snapshot tests if your endpoint have whole state in another varaible than default (\_\_initialState\_\_)
 
 - Live-reload is enabled when you run:
 ```
@@ -34,4 +34,4 @@ yarn start
 2) yarn with-values
 ```
 
-Enjoy!
+**Enjoy!**
