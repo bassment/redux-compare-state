@@ -7,7 +7,11 @@
     "build": "webpack --progress",
     "start": "webpack --progress -w",
     "only-keys": "node scripts/diff_state_only_keys.js",
-    "with-values": "node scripts/diff_state_with_values.js"
+    "with-values": "node scripts/diff_state_with_values.js",
+    "mac-snapshot": "STATE_VARIABLE=__initialState__ SNAPSHOT=true bin/mac/phantomjs scripts/state_from_link.js",
+    "win-snapshot": "STATE_VARIABLE=__initialState__ SNAPSHOT=true bin/win/phantomjs scripts/state_from_link.js",
+    "mac-state": "STATE_VARIABLE=__initialState__ bin/mac/phantomjs scripts/state_from_link.js",
+    "win-state": "STATE_VARIABLE=__initialState__ bin/win/phantomjs scripts/state_from_link.js"
   },
   "dependencies": {
     "jsondiffpatch": "^0.2.4",
