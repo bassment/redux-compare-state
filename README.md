@@ -20,7 +20,7 @@ AND
 yarn win-state <the_link_to_your_new_redux_store>
 ```
 
-- You can rewrite STATE_VARIABLE env variable in package.json for state/snapshot tests if your endpoint have whole state in another varaible than default (*\_\_initialState\_\_*)
+- You can rewrite STATE_VARIABLE env variable in package.json for state/snapshot tests if your endpoint have whole state in another varaible than default (**\_\_initialState\_\_**)
 
 - Live-reload is enabled when you run:
 ```
