@@ -6,7 +6,14 @@ _You need 5 steps to start tracking your changes:_
 1) yarn install
 2) yarn mac-snapshot <the_link_to_your_snapshot_redux_store>
 3) yarn mac-state <the_link_to_your_new_redux_store>
-4) yarn start
+```
+*Example:*
+```
+yarn mac-state http://www.zooover.nl/
+```
+
+```
+4) yarn build
 5) Open index.html from root folder in your browser
 ```
 
