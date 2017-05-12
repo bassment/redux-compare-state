@@ -11,6 +11,7 @@ _You need 5 steps to start tracking your changes:_
 ```
 yarn mac-state http://www.zooover.nl/
 ```
+*Last steps:*
 
 ```
 4) yarn build
