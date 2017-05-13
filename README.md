@@ -24,12 +24,15 @@ yarn mac-state http://www.zooover.nl/
 yarn get-state http://www.zooover.nl/
 ```
 
-*Last steps:*
+**LAST STEPS:**
 
 ```
 4) yarn build
 5) Open index.html from root folder in your browser
 ```
+
+
+
 
 **NOTES:**
 
