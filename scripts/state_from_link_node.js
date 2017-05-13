@@ -8,7 +8,7 @@ const link = process.argv[2];
 const STATE_VARIABLE = process.env.STATE_VARIABLE;
 const SNAPSHOT = process.env.SNAPSHOT;
 
-console.log(link);
+console.log(`Grabbing state from - ${link}`);
 
 function checkDirExists(filePath) {
   const dirname = path.dirname(filePath);
@@ -31,8 +31,11 @@ request(link, function(error, response, html){
         const state = JSON.stringify(jsState);
         const destination = SNAPSHOT ? 'data/snapshot.js' : 'data/new_state.js';
         checkDirExists(destination);
+        const additionalComment = jsState
+            ? '\nFile with state is successfully created!'
+            : '\nUnfortunetly you don\'t have any redux state on your webpage.'
         fs.writeFile(destination, `module.exports=${state}`, (err) => !err
-            ? console.log('File with state is successfully created!')
+            ? console.log(additionalComment)
             : console.error(err)
         )
     } else {
