@@ -4,6 +4,9 @@
 _You need 5 steps to start tracking your changes:_
 ```
 1) yarn install
+```
+**PHANTOMJS SOLUTION:**
+```
 2) yarn mac-snapshot <the_link_to_your_snapshot_redux_store>
 3) yarn mac-state <the_link_to_your_new_redux_store>
 ```
@@ -11,6 +14,16 @@ _You need 5 steps to start tracking your changes:_
 ```
 yarn mac-state http://www.zooover.nl/
 ```
+**(ZOOVER) LIGHTER SERVER-SIDE RENDERING / REQUEST+CHEERIO SOLUTION:**
+```
+2) yarn snapshot <the_link_to_your_snapshot_redux_store>
+3) yarn get-state <the_link_to_your_new_redux_store>
+```
+*Example:*
+```
+yarn get-state http://www.zooover.nl/
+```
+
 *Last steps:*
 
 ```
@@ -24,7 +37,9 @@ yarn mac-state http://www.zooover.nl/
 Then you can run scripts as:
 ```
 yarn win-snapshot <the_link_to_your_snapshot_redux_store>
-AND
+```
+*AND*
+```
 yarn win-state <the_link_to_your_new_redux_store>
 ```
 
@@ -38,8 +53,8 @@ yarn start
 - There are 2 more commands to show diff output in console with help of chalk! lib
 
 ```
-1) yarn only-keys
-2) yarn with-values
+1) yarn diff-keys
+2) yarn diff-values
 ```
 
 **Enjoy!**
