@@ -6,16 +6,20 @@
   "scripts": {
     "build": "webpack --progress",
     "start": "webpack --progress -w",
-    "only-keys": "node scripts/diff_state_only_keys.js",
-    "with-values": "node scripts/diff_state_with_values.js",
-    "mac-snapshot": "STATE_VARIABLE=__initialState__ SNAPSHOT=true bin/mac/phantomjs scripts/state_from_link.js",
-    "win-snapshot": "STATE_VARIABLE=__initialState__ SNAPSHOT=true bin/win/phantomjs scripts/state_from_link.js",
-    "mac-state": "STATE_VARIABLE=__initialState__ bin/mac/phantomjs scripts/state_from_link.js",
-    "win-state": "STATE_VARIABLE=__initialState__ bin/win/phantomjs scripts/state_from_link.js"
+    "diff-keys": "node scripts/diff_state_keys.js",
+    "diff-values": "node scripts/diff_state_values.js",
+    "get-state": "STATE_VARIABLE=__initialState__ node scripts/state_from_link_node.js",
+    "snapshot": "STATE_VARIABLE=__initialState__ SNAPSHOT=true node scripts/state_from_link_node.js",
+    "mac-snapshot": "STATE_VARIABLE=__initialState__ SNAPSHOT=true bin/mac/phantomjs scripts/state_from_link_phantom.js",
+    "win-snapshot": "STATE_VARIABLE=__initialState__ SNAPSHOT=true bin/win/phantomjs scripts/state_from_link_phantom.js",
+    "mac-state": "STATE_VARIABLE=__initialState__ bin/mac/phantomjs scripts/state_from_link_phantom.js",
+    "win-state": "STATE_VARIABLE=__initialState__ bin/win/phantomjs scripts/state_from_link_phantom.js"
   },
   "dependencies": {
-    "jsondiffpatch": "^0.2.4",
-    "webpack": "^2.5.1"
+    "cheerio": "0.22.0",
+    "jsondiffpatch": "0.2.4",
+    "request": "2.81.0",
+    "webpack": "2.5.1"
   },
   "devDependencies": {
     "webpack-livereload-plugin": "^0.11.0"
